@@ -38,4 +38,8 @@ public class WordObject {
     public void setNumSyllables(int numSyllables) {
         this.numSyllables = numSyllables;
     }
+
+    public String toString(){
+        return "{" + word + ", " + score + "; " + numSyllables + "}";
+    }
 }

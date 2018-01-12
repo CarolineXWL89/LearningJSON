@@ -11,7 +11,7 @@ import retrofit2.http.Query;
  */
 
 public interface DataMuseAPI {
-    String baseURL = "api.datamuse.com"; //basically our concatenate things; doesn't need http://www.
+    String baseURL = "http://www.api.datamuse.com"; //basically our concatenate things
 
     @GET("words")
     Call<List<WordObject>> getSoundsLike(@Query("sl") String word);

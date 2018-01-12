@@ -1,7 +1,9 @@
 package com.example.caroline.learningjson;
 
+import android.provider.UserDictionary;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import java.util.List;
@@ -32,7 +34,11 @@ public class MainActivity extends AppCompatActivity {
         call.enqueue(new Callback<List<WordObject>>() {
             @Override
             public void onResponse(Call<List<WordObject>> call, Response<List<WordObject>> response) {
-
+                List<WordObject> words = response.body();
+                Log.d("IT WORKED", words.toString());
+                /*TODO wrie a ListView
+                TODO create an adapter with the words
+                TODO set the adapter to the ListView*/
             }
 
             @Override
